@@ -59,12 +59,12 @@ nav a:hover{color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
 .chips span{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:13px;font-weight:500}
 .hero-visual{position:relative;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,#d9b8a2,#b9876b 70%,#8f6248);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
-.hero-visual::before{content:"Pilates";position:absolute;top:18%;font-family:var(--en);font-style:italic;font-size:clamp(56px,9vw,96px);color:rgba(255,255,255,.28)}
-.hero-visual .stat{background:rgba(255,255,255,.92);border-radius:16px;margin:0 20px 22px;padding:18px 22px;text-align:center;width:calc(100% - 40px)}
-.hero-visual .stat b{display:block;font-family:var(--en);font-size:48px;line-height:1;color:var(--accent-dark)}
+.hero-ill{position:absolute;top:3%;left:50%;transform:translateX(-50%);width:80%;height:auto}
+.hero-visual .stat{position:relative;background:rgba(255,255,255,.92);border-radius:16px;margin:0 20px 18px;padding:10px 18px;text-align:center;width:calc(100% - 40px)}
+.hero-visual .stat b{display:block;font-family:var(--en);font-size:38px;line-height:1;color:var(--accent-dark)}
 .hero-visual .stat b small{font-family:var(--sans);font-size:16px;margin-left:4px}
 .hero-visual .stat span{font-size:12px;color:var(--muted)}
-@media(max-width:820px){.hero{padding-top:110px}.hero .wrap{grid-template-columns:1fr}.hero-visual{max-width:340px;margin:0 auto;aspect-ratio:1/1;border-radius:170px 170px 24px 24px}}
+@media(max-width:820px){.hero{padding-top:110px}.hero .wrap{grid-template-columns:1fr}.hero-visual{max-width:340px;width:100%;margin:0 auto;aspect-ratio:4/5;border-radius:170px 170px 24px 24px}}
 
 /* numbers */
 .numbers{background:var(--card);padding:56px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -84,6 +84,10 @@ nav a:hover{color:var(--ink)}
 /* features */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .feat{background:var(--card);border-radius:18px;padding:32px 26px;border:1px solid var(--border)}
+.ico{width:52px;height:52px;display:block;margin-bottom:14px}
+.ico *{stroke:var(--accent-dark);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ico .f{fill:#efd5c3;stroke:none}
+.feat-top{display:flex;justify-content:space-between;align-items:flex-start}
 .feat .no{font-family:var(--en);font-size:40px;color:var(--accent);line-height:1}
 .feat h3{font-family:var(--serif);font-size:18px;margin:14px 0 10px;line-height:1.6}
 .feat p{font-size:14px;color:var(--muted)}
@@ -191,6 +195,47 @@ footer a{color:#cbbfb5;margin:0 10px}
       <p class="note" style="margin:12px 0 0 8px">面接はオンライン（Zoom）で受けられます</p>
     </div>
     <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-ill" aria-hidden="true" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 背景の円 -->
+  <circle cx="150" cy="150" r="118" fill="#fff" opacity=".14"/>
+  <!-- 観葉植物 -->
+  <g stroke="#fff" stroke-width="3" opacity=".85">
+    <path d="M52 270 V200"/>
+    <path d="M52 236 C34 228 28 212 30 198 C44 202 52 214 52 230"/>
+    <path d="M52 222 C68 212 74 196 72 182 C58 188 52 202 52 218"/>
+    <path d="M52 206 C42 196 42 182 48 172 C56 182 56 194 52 204"/>
+  </g>
+  <path d="M38 270 h28 l-4 22 h-20z" fill="#fff" opacity=".85"/>
+  <!-- ボール -->
+  <circle cx="244" cy="266" r="22" fill="#f6e6da"/>
+  <path d="M224 258 C236 266 252 266 264 256" stroke="#d9b8a2" stroke-width="2.5"/>
+  <!-- マット -->
+  <rect x="86" y="284" width="140" height="8" rx="4" fill="#fff" opacity=".7"/>
+  <!-- 脚（レギンス） -->
+  <path d="M152 196 L124 282" stroke="#5a4034" stroke-width="17"/>
+  <path d="M154 196 L186 282" stroke="#5a4034" stroke-width="17"/>
+  <!-- 足 -->
+  <path d="M116 284 h14" stroke="#f3d7c4" stroke-width="8"/>
+  <path d="M184 284 h14" stroke="#f3d7c4" stroke-width="8"/>
+  <!-- 腕（後ろ側） -->
+  <path d="M146 118 C128 92 140 58 178 40" stroke="#ecc8b0" stroke-width="10"/>
+  <!-- 胴体（トップス） -->
+  <path d="M153 198 C147 168 148 140 162 112" stroke="#fff" stroke-width="32"/>
+  <!-- 首・頭 -->
+  <path d="M164 104 L170 94" stroke="#f3d7c4" stroke-width="10"/>
+  <circle cx="177" cy="80" r="16" fill="#f3d7c4"/>
+  <path d="M162 76 C162 60 186 58 192 72 C186 70 176 70 168 82 Z" fill="#5a4034"/>
+  <circle cx="164" cy="66" r="8" fill="#5a4034"/>
+  <!-- 腕（手前側） -->
+  <path d="M170 114 C196 96 196 62 180 40" stroke="#f3d7c4" stroke-width="10"/>
+  <circle cx="179" cy="39" r="6" fill="#f3d7c4"/>
+  <!-- きらめき -->
+  <g stroke="#fff" stroke-width="2.5" opacity=".9">
+    <path d="M236 70 v16 M228 78 h16"/>
+    <path d="M70 110 v10 M65 115 h10"/>
+  </g>
+</svg>
+
       <div class="stat"><span>入社半年後の平均月収</span><b>35<small>万円</small></b></div>
     </div>
   </div>
@@ -222,12 +267,12 @@ footer a{color:#cbbfb5;margin:0 10px}
   <div class="wrap">
     <div class="center fade"><span class="en">Why La pilates</span><h2>La pilatesで働く、6つの魅力</h2></div>
     <div class="feat-grid">
-      <div class="feat fade"><div class="no">01</div><h3>未経験から1ヶ月でデビュー</h3><p>ピラティスに加え、骨膜整体・解剖学・接客まで体系的に学べる研修を用意。業種・職種未経験の方も多数活躍しています。</p></div>
-      <div class="feat fade"><div class="no">02</div><h3>業界トップクラスの収入</h3><p>月給23万円〜に加え、還元率34%の歩合給。入社半年で平均月収35万円を目指せます。</p></div>
-      <div class="feat fade"><div class="no">03</div><h3>完全マンツーマンで向き合える</h3><p>グループではなく1対1のレッスン。お客様一人ひとりの変化を間近で感じられる、やりがいのある仕事です。</p></div>
-      <div class="feat fade"><div class="no">04</div><h3>残業なし・時間外の会議なし</h3><p>実働8時間のシフト制。休日や営業時間外の会議・研修はありません。プライベートも大切にできます。</p></div>
-      <div class="feat fade"><div class="no">05</div><h3>サブスク制で安定した集客</h3><p>定期的に通うお客様が多く、継続的な関係を築きながら、着実に指名や実績を積み上げられます。</p></div>
-      <div class="feat fade"><div class="no">06</div><h3>自分らしく長く働ける</h3><p>髪型・服装・ネイル自由、ウェア支給。産休・育休は最大2年。ライフステージが変わっても続けられます。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><path d="M6 20 L26 11 L46 20 L26 29 Z"/><path d="M14 24 V34 C20 40 32 40 38 34 V24"/><path d="M46 20 V30"/></svg><div class="no">01</div></div><h3>未経験から1ヶ月でデビュー</h3><p>ピラティスに加え、骨膜整体・解剖学・接客まで体系的に学べる研修を用意。業種・職種未経験の方も多数活躍しています。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><path d="M8 42 H44"/><rect x="11" y="30" width="7" height="12"/><rect x="22.5" y="23" width="7" height="19"/><rect x="34" y="14" width="7" height="28"/><path d="M10 22 L20 14 L28 18 L42 6 M36 6 H42 V12"/></svg><div class="no">02</div></div><h3>業界トップクラスの収入</h3><p>月給23万円〜に加え、還元率34%の歩合給。入社半年で平均月収35万円を目指せます。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><circle cx="17" cy="16" r="5"/><circle cx="35" cy="16" r="5"/><path d="M8 40 C8 30 26 30 26 40 M26 40 C26 30 44 30 44 40"/><path d="M22 26 C24 24 28 24 30 26"/></svg><div class="no">03</div></div><h3>完全マンツーマンで向き合える</h3><p>グループではなく1対1のレッスン。お客様一人ひとりの変化を間近で感じられる、やりがいのある仕事です。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><circle cx="24" cy="26" r="16"/><path d="M24 16 V26 L31 30"/><path d="M36 42 C40 38 46 38 48 42"/></svg><div class="no">04</div></div><h3>残業なし・時間外の会議なし</h3><p>実働8時間のシフト制。休日や営業時間外の会議・研修はありません。プライベートも大切にできます。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><rect x="8" y="12" width="34" height="30" rx="4"/><path d="M8 21 H42 M16 8 V15 M34 8 V15"/><path d="M19 32 a6 6 0 1 0 6-6 M25 22 V26 H21"/></svg><div class="no">05</div></div><h3>サブスク制で安定した集客</h3><p>定期的に通うお客様が多く、継続的な関係を築きながら、着実に指名や実績を積み上げられます。</p></div>
+      <div class="feat fade"><div class="feat-top"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><path d="M26 42 C14 34 8 27 8 19 C8 13 12 9 17 9 C21 9 24 12 26 15 C28 12 31 9 35 9 C40 9 44 13 44 19 C44 27 38 34 26 42 Z"/><path d="M42 36 v8 M38 40 h8"/></svg><div class="no">06</div></div><h3>自分らしく長く働ける</h3><p>髪型・服装・ネイル自由、ウェア支給。産休・育休は最大2年。ライフステージが変わっても続けられます。</p></div>
     </div>
   </div>
 </section>
@@ -254,10 +299,10 @@ footer a{color:#cbbfb5;margin:0 10px}
     <div class="fade"><span class="en">Training</span><h2>入社からデビューまで、1ヶ月。</h2>
     <p class="lead">ピラティスの指導経験がなくても大丈夫。研修でプロとして必要な知識と技術を身につけます。</p></div>
     <div class="steps">
-      <div class="step fade"><div class="n">STEP 01</div><h3>ピラティス</h3><p>マシンピラティスの基礎から、お客様に合わせたメニューの組み立てまで。</p></div>
-      <div class="step fade"><div class="n">STEP 02</div><h3>骨膜整体</h3><p>La pilatesならではの「Wアプローチ」を支える、整体の技術を習得。</p></div>
-      <div class="step fade"><div class="n">STEP 03</div><h3>解剖学</h3><p>身体の構造を理解し、根拠をもって指導できる力を養います。</p></div>
-      <div class="step fade"><div class="n">STEP 04</div><h3>接客・デビュー</h3><p>カウンセリングや入会案内を学び、いよいよスタジオデビュー。</p></div>
+      <div class="step fade"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><rect x="6" y="32" width="40" height="6" rx="2"/><path d="M10 38 V44 M42 38 V44 M40 32 V20 M36 20 H44"/><circle cx="18" cy="24" r="4"/><path d="M22 28 L34 28 L38 20"/></svg><div class="n">STEP 01</div><h3>ピラティス</h3><p>マシンピラティスの基礎から、お客様に合わせたメニューの組み立てまで。</p></div>
+      <div class="step fade"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><rect x="21" y="5" width="10" height="7" rx="3"/><rect x="20" y="15" width="12" height="7" rx="3"/><rect x="19" y="25" width="14" height="7" rx="3"/><rect x="18" y="35" width="16" height="8" rx="3"/><path d="M12 14 C8 20 8 30 12 36 M40 14 C44 20 44 30 40 36"/></svg><div class="n">STEP 02</div><h3>骨膜整体</h3><p>La pilatesならではの「Wアプローチ」を支える、整体の技術を習得。</p></div>
+      <div class="step fade"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><circle cx="26" cy="10" r="5"/><path d="M26 15 V30 M18 20 H34 M20 44 L26 30 L32 44"/><path d="M14 20 V30 M38 20 V30"/></svg><div class="n">STEP 03</div><h3>解剖学</h3><p>身体の構造を理解し、根拠をもって指導できる力を養います。</p></div>
+      <div class="step fade"><svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle class="f" cx="30" cy="30" r="16"/><path d="M26 6 L30 18 L42 18 L32 26 L36 38 L26 30 L16 38 L20 26 L10 18 L22 18 Z"/></svg><div class="n">STEP 04</div><h3>接客・デビュー</h3><p>カウンセリングや入会案内を学び、いよいよスタジオデビュー。</p></div>
     </div>
   </div>
 </section>
